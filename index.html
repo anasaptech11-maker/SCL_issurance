@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCL Insurance - Drive with Confidence</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <div class="nav-logo" onclick="navigate('home')"><img src="Scl Logo.png" alt="SCL Logo" width="200px">
+    </div>
+    <div class="nav-links">
+      <span class="nav-link active" id="nav-home" onclick="navigate('home')">Home</span>
+      <span class="nav-link" id="nav-about" onclick="navigate('about')">About</span>
+      <span class="nav-link" id="nav-plans" onclick="navigate('plans')">Plans</span>
+      <span class="nav-link" id="nav-vehicles" onclick="navigate('vehicles')">Vehicles</span>
+      <span class="nav-link" id="nav-contact" onclick="navigate('contact')">Contact</span>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn-quote" onclick="navigate('quote')">Get a Quote</button>
+      <button class="nav-btn-signup" id="signupNavBtn" onclick="navigate('signup')">Sign Up</button>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-mobile" id="mobileMenu">
+    <span class="nav-link" onclick="navigate('home')">Home</span>
+    <span class="nav-link" onclick="navigate('about')">About</span>
+    <span class="nav-link" onclick="navigate('plans')">Plans</span>
+    <span class="nav-link" onclick="navigate('vehicles')">Vehicles</span>
+    <span class="nav-link" onclick="navigate('contact')">Contact</span>
+    <span class="nav-mobile-cta" onclick="navigate('quote')">Get a Quote</span>
+    <span class="nav-mobile-cta" id="mobileSignupBtn" style="background:var(--gray-900);" onclick="navigate('signup')">Sign Up</span>
+  </div>
+</nav>
+
+<!-- ===== HOME ===== -->
+<div class="page active" id="page-home">
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-badge">Pakistan's Trusted Auto Insurance</div>
+        <h1 class="hero-title">Drive with <span>Confidence.</span></h1>
+        <p class="hero-desc">Comprehensive vehicle insurance built for Pakistani drivers. Compare top providers, choose your tier, and get covered the same day.</p>
+        <div class="hero-btns">
+          <button class="btn btn-primary" onclick="navigate('quote')">Get Your Free Quote</button>
+          <button class="btn btn-white-outline" onclick="navigate('plans')">Browse Plans</button>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hero-stat-num">50K+</div><div class="hero-stat-lbl">Drivers Insured</div></div>
+          <div><div class="hero-stat-num">4.9★</div><div class="hero-stat-lbl">Customer Rating</div></div>
+          <div><div class="hero-stat-num">24/7</div><div class="hero-stat-lbl">Claims Support</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item"><div class="stat-value">50,000+</div><div class="stat-label">Active Policies</div></div>
+        <div class="stat-item"><div class="stat-value">98%</div><div class="stat-label">Claims Approved</div></div>
+        <div class="stat-item"><div class="stat-value">15+</div><div class="stat-label">Years of Service</div></div>
+        <div class="stat-item"><div class="stat-value">24/7</div><div class="stat-label">Helpline</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Why Choose SCL</span>
+        <h2 class="section-title">Insurance Built for Pakistan</h2>
+        <p class="section-subtitle">From sedans to motorbikes, we partner with the country's leading insurers to bring you trusted coverage at honest prices.</p>
+      </div>
+      <div class="img-grid-3">
+        <div class="img-card"><img class="img-card-pic" src="trust.jpg" alt="Trust"><div class="img-card-body"><h3 class="img-card-title">Trusted Protection</h3><p class="img-card-desc">Backed by EFU, Adamjee, Jubilee &amp; TPL — Pakistan's top-rated insurers under one roof.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="fast.jpg" alt="Fast"><div class="img-card-body"><h3 class="img-card-title">Fast Claim Settlement</h3><p class="img-card-desc">Average claim approved within 48 hours. Direct workshop network across all major cities.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="savings.jpg" alt="Savings"><div class="img-card-body"><h3 class="img-card-title">Lowest Prices</h3><p class="img-card-desc">Compare quotes from 4 top providers in one place and save up to 35% on your premium.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="support_pk.png" alt="Support"><div class="img-card-body"><h3 class="img-card-title">24/7 Helpline</h3><p class="img-card-desc">Roadside support, towing and emergency claims hotline — anywhere in Pakistan.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="satisfaction.jpg" alt="Satisfied"><div class="img-card-body"><h3 class="img-card-title">98% Satisfaction</h3><p class="img-card-desc">Rated 4.9/5 by over 50,000 happy policyholders across Karachi, Lahore and Islamabad.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="policy_pk.png" alt="Policy"><div class="img-card-body"><h3 class="img-card-title">Same-Day Coverage</h3><p class="img-card-desc">Apply online, get approved, and drive insured today — paperless and hassle-free.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Plans &amp; Pricing</span>
+        <h2 class="section-title">Choose the Right Coverage</h2>
+        <p class="section-subtitle">Three tiers built around your needs and budget — all prices in Pakistani Rupees.</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card">
+          <img class="plan-card-pic" src="cars_pk.png" alt="">
+          <h3 class="plan-name">Basic</h3>
+          <p class="plan-desc">Essential cover for everyday driving</p>
+          <div class="plan-price"><span class="plan-amount">PKR 4,500</span><span class="plan-period">/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature included"><span class="check-mark">✓</span> Third Party Liability</li>
+            <li class="plan-feature included"><span class="check-mark">✓</span> Personal Accident Cover</li>
+            <li class="plan-feature included"><span class="check-mark">✓</span> Basic Roadside Help</li>
+            <li class="plan-feature excluded"><span class="x-mark">×</span> Comprehensive Coverage</li>
+            <li class="plan-feature excluded"><span class="x-mark">×</span> Theft Protection</li>
+          </ul>
+          <button class="plan-btn plan-btn-dark" onclick="buyPlan('SCL Basic Plan','SCL Insurance','PKR 4,500/mo')">Buy Basic</button>
+        </div>
+        <div class="plan-card highlight">
+          <img class="plan-card-pic" src="Suvs.png" alt="">
+          <span class="plan-badge">Most Popular</span>
+          <h3 class="plan-name">Standard</h3>
+          <p class="plan-desc">Balanced cover for most Pakistani drivers</p>
+          <div class="plan-price"><span class="plan-amount">PKR 8,900</span><span class="plan-period">/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature included"><span class="check-mark">✓</span> All Basic Benefits</li>
+            <li class="plan-feature included"><span class="check-mark">✓</span> Comprehensive Cover</li>
+            <li class="plan-feature included"><span class="check-mark">✓</span> Theft &amp; Snatching</li>
+            <li class="plan-feature included"><span class="check-mark">✓</span> 24/7 Roadside Assistance</li>
+            <li class="plan-feature excluded"><span class="x-mark">×</span> New Vehicle Replacement</li>
+          </ul>
+          <button class="plan-btn plan-btn-primary" onclick="buyPlan('SCL Standard Plan','SCL Insurance','PKR 8,900/mo')">Buy Standard</button>
+        </div>
+        <div class="plan-card">
+          <img class="plan-card-pic" src="Tesla car.png" alt="">
+          <h3 class="plan-name">Premium</h3>
+          <p class="plan-desc">Total peace of mind, top-tier service</p>
+          <div class="plan-price"><span class="plan-amount">PKR 13,900</span><span class="plan-period">/month</span></div>
+          <ul class="plan-features">
+            <li class="plan-feature included"><span class="check-mark">✓</span> All Standard Benefits</li>
+            <li class="plan-feature included"><span class="check-mark">✓</span> New Vehicle Replacement</li>
+            <li class="plan-feature included"><span class="check-mark">✓</span> Zero Depreciation</li>
+            <li class="plan-feature included"><span class="check-mark">✓</span> Premium Workshop Network</li>
+            <li class="plan-feature included"><span class="check-mark">✓</span> Family Driver Cover</li>
+          </ul>
+          <button class="plan-btn plan-btn-dark" onclick="buyPlan('SCL Premium Plan','SCL Insurance','PKR 13,900/mo')">Buy Premium</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="about-inner">
+        <div>
+          <h2 class="about-title">Built for Pakistani drivers, <span>by Pakistanis.</span></h2>
+          <p class="about-text">SCL Insurance was founded in Karachi with one belief: insurance should be transparent, affordable and fast. We partner with Pakistan's most trusted insurers — EFU, Adamjee, Jubilee and TPL — so you can compare real plans from real companies in one place.</p>
+          <p class="about-text">No middlemen. No hidden charges. Just fair coverage that pays out when you need it most.</p>
+          <div style="margin-top:2rem;">
+            <button class="btn btn-primary" onclick="navigate('about')">Learn More About Us</button>
+          </div>
+        </div>
+        <div>
+          <img class="about-pic" src="team_pk.png" alt="Our team">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Customer Stories</span>
+        <h2 class="section-title">Loved by Drivers Across Pakistan</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Filed a claim after an accident on Sharah-e-Faisal. SCL handled everything within 3 days — no paperwork stress at all."</p>
+          <div class="testimonial-author"><div class="author-avatar">AH</div><div><div class="author-name">Ahmed Hassan</div><div class="author-location">Karachi</div></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"I compared 4 insurers in one app and saved PKR 32,000 on my Honda Civic policy. Best experience ever."</p>
+          <div class="testimonial-author"><div class="author-avatar">SK</div><div><div class="author-name">Sana Khan</div><div class="author-location">Lahore</div></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"My bike was stolen last Ramadan and SCL paid the full claim within a week. Forever grateful for their honesty."</p>
+          <div class="testimonial-author"><div class="author-avatar">BA</div><div><div class="author-name">Bilal Ahmed</div><div class="author-location">Islamabad</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Ready to Drive Insured?</h2>
+      <p class="cta-desc">Get a free no-obligation quote in under 60 seconds.</p>
+      <div class="cta-btns">
+        <button class="btn btn-white" onclick="navigate('quote')">Get My Free Quote</button>
+        <button class="btn btn-white-outline" onclick="navigate('contact')">Talk to an Agent</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<div class="page" id="page-about">
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">About Us</span>
+      <h1>Insurance, Done Right.</h1>
+      <p>Honest pricing, fair claims, and a team that picks up the phone — that's the SCL promise.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="about-inner">
+        <div>
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">From Karachi to All of Pakistan</h2>
+          <p style="margin-top:1.25rem;color:var(--gray-500);line-height:1.8;">SCL Insurance started in 2010 as a small office in Karachi's Saddar district. Frustrated with the maze of paperwork and unclear pricing in the local insurance market, our founders set out to build something simpler.</p>
+          <p style="margin-top:1rem;color:var(--gray-500);line-height:1.8;">Today, SCL is one of Pakistan's leading insurance comparison and brokerage platforms — partnered with EFU, Adamjee, Jubilee and TPL Direct to bring fair, transparent vehicle coverage to over 50,000 drivers nationwide.</p>
+        </div>
+        <div><img class="about-pic" src="office_pk.png" alt="Our office" style="height:400px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Our Principles</span>
+        <h2 class="section-title">What We Stand For</h2>
+      </div>
+      <div class="img-grid-3">
+        <div class="img-card"><img class="img-card-pic" src="trust.jpg" alt=""><div class="img-card-body"><h3 class="img-card-title">Transparency First</h3><p class="img-card-desc">Every premium, every condition, every exclusion — written in plain Urdu and English.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="fast.jpg" alt=""><div class="img-card-body"><h3 class="img-card-title">Speed Matters</h3><p class="img-card-desc">Average claim settlement in 48 hours. Quote-to-coverage in under 60 seconds.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="satisfaction.jpg" alt=""><div class="img-card-body"><h3 class="img-card-title">Customer For Life</h3><p class="img-card-desc">98% of policyholders renew with us. We treat every customer like our family.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Meet the Team</span>
+        <h2 class="section-title">The People Behind SCL</h2>
+      </div>
+      <div class="img-grid-3" style="margin-top:3rem;">
+        <div class="img-card"><img class="img-card-pic" src="team_pk.png" alt=""><div class="img-card-body"><h3 class="img-card-title">Operations Team</h3><p class="img-card-desc">Our 40-strong operations team in Karachi handles every quote and claim with care.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="support_pk.png" alt=""><div class="img-card-body"><h3 class="img-card-title">24/7 Support</h3><p class="img-card-desc">Friendly, multilingual support agents available every day of the year.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="policy_pk.png" alt=""><div class="img-card-body"><h3 class="img-card-title">Claims Specialists</h3><p class="img-card-desc">Senior assessors who fight for the highest possible settlement on every claim.</p></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== PLANS ===== -->
+<div class="page" id="page-plans">
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">Plans &amp; Pricing</span>
+      <h1>Pakistan's Best Insurance Plans</h1>
+      <p>Compare Basic, Standard and Premium plans from EFU, Adamjee, Jubilee and TPL Direct — across every vehicle type. All prices in PKR.</p>
+    </div>
+  </div>
+
+  <!-- <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Plans By Vehicle</span>
+        <h2 class="section-title">Coverage For Every Ride</h2>
+        <p class="section-subtitle">From family sedans to motorbikes, trucks and EVs — pick your vehicle to jump straight to its plans below.</p>
+      </div>
+  </section> -->
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">By Vehicle Category</span>
+        <h2 class="section-title">Pick Your Vehicle, See All Plans</h2>
+        <p class="section-subtitle">Click any category to expand and view 4 top insurers with their Basic, Standard and Premium tiers.</p>
+      </div>
+
+      <div class="cat-section" id="catSection">
+        <!-- Categories injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Not Sure Which Plan?</h2>
+      <p class="cta-desc">Talk to an SCL advisor — free, no obligation, in Urdu or English.</p>
+      <div class="cta-btns">
+        <button class="btn btn-white" onclick="navigate('quote')">Get a Personalized Quote</button>
+        <button class="btn btn-white-outline" onclick="navigate('contact')">Call an Advisor</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== VEHICLES ===== -->
+<div class="page" id="page-vehicles">
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">Vehicle Coverage</span>
+      <h1>Insurance For Every Ride</h1>
+      <p>From a 70cc bike in Multan to an electric SUV in Lahore — we've got you covered.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Vehicle Types</span>
+        <h2 class="section-title">What We Insure</h2>
+      </div>
+      <div class="img-grid-3">
+        <div class="img-card"><img class="img-card-pic" src="cars_pk.png" alt=""><div class="img-card-body"><h3 class="img-card-title">Cars &amp; Sedans</h3><p class="img-card-desc">Honda Civic, Toyota Corolla, Suzuki Cultus and every other family car on Pakistani roads.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="Suvs.png" alt=""><div class="img-card-body"><h3 class="img-card-title">SUVs &amp; Crossovers</h3><p class="img-card-desc">Toyota Fortuner, Hyundai Tucson, Honda BR-V — built for our roads and our weather.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="trucks_pk.png" alt=""><div class="img-card-body"><h3 class="img-card-title">Trucks &amp; Commercial</h3><p class="img-card-desc">Pickup trucks, Shahzore, Hino — protect your business and your livelihood.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="motorcycles_pk.png" alt=""><div class="img-card-body"><h3 class="img-card-title">Motorcycles</h3><p class="img-card-desc">Honda CD70, CG125, Yamaha YBR — coverage that includes theft and snatching.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="electric_pk.png" alt=""><div class="img-card-body"><h3 class="img-card-title">Electric Vehicles</h3><p class="img-card-desc">MG ZS EV, BYD, Audi e-tron — battery and charging equipment included.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="bikes.jpg" alt=""><div class="img-card-body"><h3 class="img-card-title">Bicycles &amp; E-Bikes</h3><p class="img-card-desc">High-end road and electric bicycles — theft, accident and personal injury cover.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Coverage Options</span>
+        <h2 class="section-title">Understanding Your Coverage</h2>
+        <p class="section-subtitle">Total transparency. Here's what each coverage type means for you.</p>
+      </div>
+      <div class="img-grid-3">
+        <div class="img-card"><img class="img-card-pic" src="liability.jpg" alt=""><div class="img-card-body"><h3 class="img-card-title">Third-Party Liability</h3><p class="img-card-desc">Covers damages and injuries you cause to others. Required by law for all vehicles in Pakistan.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="collision.jpg" alt=""><div class="img-card-body"><h3 class="img-card-title">Collision Coverage</h3><p class="img-card-desc">Pays for repairs to your own vehicle after an accident, regardless of who is at fault.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="comprehensive.jpg" alt=""><div class="img-card-body"><h3 class="img-card-title">Comprehensive Cover</h3><p class="img-card-desc">Protects against theft, snatching, riots, floods, fire and natural disasters.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="uninsured.jpg" alt=""><div class="img-card-body"><h3 class="img-card-title">Uninsured Motorist</h3><p class="img-card-desc">Protection if you're hit by a driver without valid insurance — common on Pakistani roads.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="pip.jpg" alt=""><div class="img-card-body"><h3 class="img-card-title">Personal Injury</h3><p class="img-card-desc">Medical expenses for you and your passengers, regardless of who caused the accident.</p></div></div>
+        <div class="img-card"><img class="img-card-pic" src="roadside_pk.png" alt=""><div class="img-card-body"><h3 class="img-card-title">Roadside Assistance</h3><p class="img-card-desc">24/7 towing, flat tire, battery jump and lockout help — anywhere in Pakistan.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title">Get Your Vehicle Covered Today</h2>
+      <p class="cta-desc">Talk to our specialists and find the right coverage for your vehicle.</p>
+      <div class="cta-btns"><button class="btn btn-white" onclick="navigate('quote')">Get a Free Quote →</button></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<div class="page" id="page-contact">
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">Contact Us</span>
+      <h1>We're Here to Help</h1>
+      <p>Have questions? Ready to get a quote? Our team is available 7 days a week.</p>
+    </div>
+  </div>
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="contact-inner">
+        <div>
+          <h2 class="contact-info-title">Get in Touch</h2>
+          <div class="contact-item"><img class="contact-pic" src="support_pk.png" alt=""><div><div class="contact-label">Phone</div><div class="contact-primary"><a href="tel:+922135670000">+92-21-3567-0000</a></div><div class="contact-sub">Mon–Sat 9am–9pm PKT</div></div></div>
+          <div class="contact-item"><img class="contact-pic" src="policy_pk.png" alt=""><div><div class="contact-label">Email</div><div class="contact-primary"><a href="mailto:info@sclinsurance.pk">info@sclinsurance.pk</a></div><div class="contact-sub">We reply within 24 hours</div></div></div>
+          <div class="contact-item"><img class="contact-pic" src="office_pk.png" alt=""><div><div class="contact-label">Head Office</div><div class="contact-primary">Plot 14, Block 6, PECHS</div><div class="contact-sub">Karachi, Pakistan 75400</div></div></div>
+          <div class="contact-item"><img class="contact-pic" src="fast.jpg" alt=""><div><div class="contact-label">Hours</div><div class="contact-primary">Mon–Fri: 9am–9pm</div><div class="contact-sub">Sat: 10am–6pm · Sun: Closed</div></div></div>
+          <div class="emergency-box">
+            <div class="emergency-title">Emergency Claims Line</div>
+            <div class="emergency-desc">Been in an accident? Our emergency line is open 24/7. Don't wait — call us right now.</div>
+            <a class="emergency-btn" href="tel:+922135670000"> Call Emergency Line</a>
+          </div>
+        </div>
+        <div class="form-card">
+          <div id="formContainer">
+            <h2 class="form-title">Request a Free Quote</h2>
+            <form id="contactForm" onsubmit="submitForm(event)">
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Full Name *</label><input class="form-input" name="name" placeholder="Ahmed Hassan" required></div>
+                <div class="form-group"><label class="form-label">Phone Number</label><input class="form-input" name="phone" placeholder="+92-300-1234567"></div>
+              </div>
+              <div class="form-group"><label class="form-label">Email Address *</label><input class="form-input" type="email" name="email" placeholder="ahmed@email.com" required></div>
+              <div class="form-group">
+                <label class="form-label">Vehicle Type</label>
+                <select class="form-input" name="vehicleType">
+                  <option value="">Select vehicle type...</option>
+                  <option>Car / Sedan</option><option>SUV / Crossover</option><option>Truck / Commercial</option><option>Motorcycle</option><option>Electric Vehicle</option><option>Bicycle / E-Bike</option><option>Other</option>
+                </select>
+              </div>
+              <div class="form-group"><label class="form-label">How can we help?</label><textarea class="form-input" name="message" rows="4" placeholder="Tell us about your coverage needs..." style="resize: none;"></textarea></div>
+              <button type="submit" class="form-submit">Send My Request</button>
+              <p class="form-note">We respect your privacy. Your information is never shared or sold.</p>
+            </form>
+          </div>
+          <div id="successState" class="success-state" style="display:none;">
+            <img class="success-pic" src="/satisfaction.jpg" alt="">
+            <h3 class="success-title">Message Sent!</h3>
+            <p class="success-desc">Thank you for contacting SCL Insurance. One of our agents will reach out to you within 24 hours.</p>
+            <button class="success-link" onclick="resetForm()">Send another message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== QUOTE ===== -->
+<div class="page" id="page-quote">
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">Free Insurance Quote</span>
+      <h1>Get Your Personalized Quote</h1>
+      <p>Fill in the details below and we'll save your quote instantly. No obligation, no credit check.</p>
+    </div>
+  </div>
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div id="quoteFormWrap">
+        <form id="quoteForm" onsubmit="submitQuote(event)">
+          <div class="quote-form-grid">
+            <div>
+              <div class="quote-section-title">Personal Information</div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">First Name *</label><input class="form-input" id="q-fname" placeholder="Ahmed" required></div>
+                <div class="form-group"><label class="form-label">Last Name *</label><input class="form-input" id="q-lname" placeholder="Hassan" required></div>
+              </div>
+              <div class="form-group"><label class="form-label">Email Address *</label><input class="form-input" type="email" id="q-email" placeholder="ahmed@email.com" required></div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Phone Number *</label><input class="form-input" id="q-phone" placeholder="+92-300-1234567" required></div>
+                <div class="form-group"><label class="form-label">Date of Birth *</label><input class="form-input" type="date" id="q-dob" required></div>
+              </div>
+              <div class="form-group"><label class="form-label">Street Address *</label><input class="form-input" id="q-address" placeholder="House 14, Block 6" required></div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">City *</label><input class="form-input" id="q-city" placeholder="Karachi" required></div>
+                <div class="form-group"><label class="form-label">Province *</label>
+                  <select class="form-input" id="q-state" required>
+                    <option value="">Select province...</option>
+                    <option>Sindh</option><option>Punjab</option><option>KPK</option><option>Balochistan</option><option>Islamabad Capital</option><option>AJK</option><option>Gilgit-Baltistan</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group"><label class="form-label">Postal Code *</label><input class="form-input" id="q-zip" placeholder="75400" maxlength="10" required></div>
+
+              <div class="quote-section-title" style="margin-top:1.5rem;">Vehicle Information</div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Vehicle Year *</label><input class="form-input" id="q-year" placeholder="2022" maxlength="4" required></div>
+                <div class="form-group"><label class="form-label">Make *</label><input class="form-input" id="q-make" placeholder="Toyota" required></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Model *</label><input class="form-input" id="q-model" placeholder="Corolla" required></div>
+                <div class="form-group"><label class="form-label">Mileage (km)</label><input class="form-input" id="q-miles" placeholder="45,000"></div>
+              </div>
+              <div class="form-group"><label class="form-label">Chassis Number (optional)</label><input class="form-input" id="q-vin" placeholder="1HGBH41JXMN109186" maxlength="17"></div>
+              <div class="form-group"><label class="form-label">Primary Use *</label>
+                <select class="form-input" id="q-use" required>
+                  <option value="">Select primary use...</option>
+                  <option>Daily Commute</option><option>Pleasure / Weekend</option><option>Business Use</option><option>Commercial / Delivery</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div class="quote-section-title">Driver Information</div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Driver's License # *</label><input class="form-input" id="q-license" placeholder="LHR-12345-678" required></div>
+                <div class="form-group"><label class="form-label">Years Licensed *</label>
+                  <select class="form-input" id="q-years" required>
+                    <option value="">Select...</option>
+                    <option>Less than 1 year</option><option>1–2 years</option><option>3–5 years</option><option>6–10 years</option><option>10+ years</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group"><label class="form-label">Driving Record *</label>
+                <select class="form-input" id="q-record" required>
+                  <option value="">Select...</option>
+                  <option>Clean Record — No incidents</option>
+                  <option>1 Minor Violation (speeding, etc.)</option>
+                  <option>1 At-Fault Accident</option>
+                  <option>Major Violation</option>
+                </select>
+              </div>
+              <div class="form-group"><label class="form-label">Currently Insured?</label>
+                <select class="form-input" id="q-insured">
+                  <option value="">Select...</option>
+                  <option>Yes — switching providers</option>
+                  <option>Yes — adding a vehicle</option>
+                  <option>No — first time</option>
+                </select>
+              </div>
+
+              <div class="quote-section-title" style="margin-top:1.5rem;">Select a Plan *</div>
+              <div class="plan-radio-grid">
+                <div><input class="plan-radio" type="radio" name="qplan" id="plan-basic" value="Basic — PKR 4,500/mo"><label class="plan-radio-label" for="plan-basic"><div class="plan-radio-name">Basic</div><div class="plan-radio-price">PKR 4,500/mo</div></label></div>
+                <div><input class="plan-radio" type="radio" name="qplan" id="plan-standard" value="Standard — PKR 8,900/mo" checked><label class="plan-radio-label" for="plan-standard"><div class="plan-radio-name">Standard</div><div class="plan-radio-price">PKR 8,900/mo</div></label></div>
+                <div><input class="plan-radio" type="radio" name="qplan" id="plan-premium" value="Premium — PKR 13,900/mo"><label class="plan-radio-label" for="plan-premium"><div class="plan-radio-name">Premium</div><div class="plan-radio-price">PKR 13,900/mo</div></label></div>
+              </div>
+
+              <div class="quote-section-title">Optional Add-Ons</div>
+              <div class="addon-check-grid">
+                <label class="addon-check-item"><input type="checkbox" value="Gap Coverage +PKR 1,200/mo"> Gap Coverage <small style="color:var(--orange)">+1,200</small></label>
+                <label class="addon-check-item"><input type="checkbox" value="New Vehicle Replacement +PKR 1,800/mo"> New Vehicle Replace <small style="color:var(--orange)">+1,800</small></label>
+                <label class="addon-check-item"><input type="checkbox" value="Snatching Cover +PKR 800/mo"> Snatching Cover <small style="color:var(--orange)">+800</small></label>
+                <label class="addon-check-item"><input type="checkbox" value="Enhanced Roadside +PKR 1,000/mo"> Enhanced Roadside <small style="color:var(--orange)">+1,000</small></label>
+              </div>
+
+              <div class="quote-section-title" style="margin-top:1.5rem;">Additional Notes</div>
+              <div class="form-group"><textarea class="form-input" id="q-notes" rows="3" placeholder="Any additional info or special requests..." style="resize:none;"></textarea></div>
+
+              <button type="submit" class="auth-submit" style="margin-top:1rem;">Save My Quote →</button>
+              <p class="form-note" style="margin-top:0.75rem;">Your quote is saved on this device. An agent will contact you within 24 hours.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="quote-success" id="quoteSuccess">
+        <img class="qs-pic" src="satisfaction.jpg" alt="">
+        <h2 class="section-title">Quote Saved Successfully!</h2>
+        <p style="color:var(--gray-500);margin-top:0.75rem;max-width:420px;">Thank you! Your quote has been saved. Reference number:</p>
+        <div class="qs-ref" id="quoteRef">#SCL-000000</div>
+        <p style="color:var(--gray-500);font-size:0.875rem;max-width:380px;">An SCL agent will contact you within 24 hours to review your quote and finalize your policy.</p>
+        <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;justify-content:center;">
+          <button class="btn btn-primary" onclick="navigate('contact')">Talk to an Agent</button>
+          <button class="btn btn-dark" onclick="newQuote()">Start New Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== PURCHASE / BUY PLAN ===== -->
+<div class="page" id="page-purchase">
+  <div class="page-header">
+    <div class="container">
+      <span class="section-label">Checkout</span>
+      <h1>Complete Your Purchase</h1>
+      <p>Review your selected plan and confirm your purchase. Coverage starts immediately.</p>
+    </div>
+  </div>
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="purchase-wrap" id="purchaseFormWrap">
+        <div class="order-card">
+          <div class="order-section">
+            <div class="order-label">Selected Plan</div>
+            <div class="order-value" id="buy-plan-name">—</div>
+            <div style="font-size:0.85rem;color:var(--gray-500);margin-top:0.25rem;" id="buy-company-name">—</div>
+          </div>
+          <div class="order-section">
+            <div class="order-label">Your Information</div>
+            <form id="buyForm" onsubmit="confirmPurchase(event)">
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Full Name *</label><input class="form-input" id="b-name" placeholder="Ahmed Hassan" required></div>
+                <div class="form-group"><label class="form-label">Phone *</label><input class="form-input" id="b-phone" placeholder="+92-300-1234567" required></div>
+              </div>
+              <div class="form-group"><label class="form-label">Email *</label><input class="form-input" type="email" id="b-email" placeholder="ahmed@email.com" required></div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">CNIC Number *</label><input class="form-input" id="b-cnic" placeholder="42101-1234567-1" required></div>
+                <div class="form-group"><label class="form-label">City *</label><input class="form-input" id="b-city" placeholder="Karachi" required></div>
+              </div>
+
+              <div class="order-label" style="margin-top:1rem;">Payment Method *</div>
+              <div class="pay-method">
+                <div><input class="pay-radio" type="radio" name="paymethod" id="pay-card" value="Credit/Debit Card" checked><label class="pay-label" for="pay-card">💳 Card</label></div>
+                <div><input class="pay-radio" type="radio" name="paymethod" id="pay-easypaisa" value="EasyPaisa"><label class="pay-label" for="pay-easypaisa">📱 EasyPaisa</label></div>
+                <div><input class="pay-radio" type="radio" name="paymethod" id="pay-jazzcash" value="JazzCash"><label class="pay-label" for="pay-jazzcash">📱 JazzCash</label></div>
+                <div><input class="pay-radio" type="radio" name="paymethod" id="pay-bank" value="Bank Transfer"><label class="pay-label" for="pay-bank">🏦 Bank Transfer</label></div>
+              </div>
+
+              <div class="order-row"><span>Plan Premium</span><span id="buy-premium">—</span></div>
+              <div class="order-row"><span>Service Fee</span><span>PKR 250</span></div>
+              <div class="order-row"><span>Tax (GST 5%)</span><span id="buy-tax">—</span></div>
+              <div class="order-row total"><span>Total Today</span><span id="buy-total">—</span></div>
+
+              <button type="submit" class="auth-submit" style="margin-top:1.5rem;">Confirm Purchase →</button>
+              <p class="form-note" style="margin-top:0.75rem;">By clicking Confirm Purchase you agree to our Terms of Service. This is a demo — no real payment is processed.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-success purchase-wrap" id="purchaseSuccess">
+        <img class="qs-pic" src="satisfaction.jpg" alt="">
+        <h2 class="section-title">Purchase Successful! </h2>
+        <p style="color:var(--gray-500);margin-top:0.75rem;max-width:460px;">Congratulations! Your insurance plan is now active. Your policy number is:</p>
+        <div class="qs-ref" id="purchaseRef">#POL-000000</div>
+        <div class="order-card" style="margin-top:0.5rem;text-align:left;width:100%;max-width:560px;">
+          <div class="order-row"><span>Plan</span><span id="ps-plan" style="font-weight:700;color:var(--gray-900);">—</span></div>
+          <div class="order-row"><span>Provider</span><span id="ps-company" style="font-weight:700;color:var(--gray-900);">—</span></div>
+          <div class="order-row"><span>Customer</span><span id="ps-name" style="font-weight:700;color:var(--gray-900);">—</span></div>
+          <div class="order-row"><span>Payment Method</span><span id="ps-pay" style="font-weight:700;color:var(--gray-900);">—</span></div>
+          <div class="order-row total"><span>Amount Charged</span><span id="ps-total">—</span></div>
+        </div>
+        <p style="color:var(--gray-500);font-size:0.875rem;max-width:420px;margin-top:1.25rem;">A confirmation email and policy document have been sent to your email address. Coverage is active immediately.</p>
+        <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;justify-content:center;">
+          <button class="btn btn-primary" onclick="navigate('home')">Back to Home</button>
+          <button class="btn btn-dark" onclick="navigate('plans')">Browse More Plans</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== SIGN UP / LOGIN ===== -->
+<div class="page" id="page-signup">
+  <div class="auth-page">
+    <div class="auth-wrap">
+      <div class="auth-side">
+        <img class="auth-side-pic" src="Umbrella + car pic.jpeg" alt="">
+        <div class="auth-side-content">
+          <h2>Welcome to SCL Insurance</h2>
+          <p>Join over 50,000 Pakistani drivers who trust SCL for honest, transparent vehicle insurance. Save your quotes, track policies and manage claims — all in one place.</p>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;color:#fdba74;"><span style="font-size:1.25rem;">✓</span><span style="font-size:0.9rem;color:#e5e7eb;">Save and compare quotes anytime</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;color:#fdba74;"><span style="font-size:1.25rem;">✓</span><span style="font-size:0.9rem;color:#e5e7eb;">Get exclusive member discounts</span></div>
+            <div style="display:flex;align-items:center;gap:0.75rem;color:#fdba74;"><span style="font-size:1.25rem;">✓</span><span style="font-size:0.9rem;color:#e5e7eb;">Fast-track claim processing</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-card" id="signupCard">
+        <div class="auth-logo">SCL<span>.</span> Insurance</div>
+        <h2 class="auth-title">Create Your Account</h2>
+        <p class="auth-subtitle">Join thousands of drivers protected by SCL.</p>
+        <div class="auth-error" id="signupError"></div>
+        <div class="auth-success-msg" id="signupSuccess"></div>
+        <form id="signupForm" onsubmit="handleSignup(event)">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">First Name *</label><input class="form-input" id="su-fname" placeholder="Ahmed" required></div>
+            <div class="form-group"><label class="form-label">Last Name *</label><input class="form-input" id="su-lname" placeholder="Hassan" required></div>
+          </div>
+          <div class="form-group"><label class="form-label">Email *</label><input class="form-input" type="email" id="su-email" placeholder="ahmed@email.com" required></div>
+          <div class="form-group"><label class="form-label">Phone *</label><input class="form-input" id="su-phone" placeholder="+92-300-1234567" required></div>
+          <div class="form-group"><label class="form-label">Date of Birth *</label><input class="form-input" type="date" id="su-dob" required></div>
+          <div class="form-group"><label class="form-label">Password *</label>
+            <div class="pw-wrapper"><input class="form-input" type="password" id="su-password" placeholder="Min. 8 characters" required minlength="8"><button type="button" class="pw-toggle" onclick="togglePw('su-password',this)">Show</button></div>
+          </div>
+          <div class="form-group"><label class="form-label">Confirm Password *</label>
+            <div class="pw-wrapper"><input class="form-input" type="password" id="su-confirm" placeholder="Re-enter password" required><button type="button" class="pw-toggle" onclick="togglePw('su-confirm',this)">Show</button></div>
+          </div>
+          <div class="auth-terms">
+            <input type="checkbox" id="su-terms" required>
+            <label for="su-terms">I agree to the <a href="#" style="color:var(--orange);font-weight:600;">Terms</a> and <a href="#" style="color:var(--orange);font-weight:600;">Privacy Policy</a> of SCL Insurance.</label>
+          </div>
+          <button type="submit" class="auth-submit">Create Account</button>
+        </form>
+        <div class="auth-divider"><span class="auth-divider-text">Already have an account?</span></div>
+        <div class="auth-footer"><a onclick="showLogin()">Login to your account →</a></div>
+      </div>
+
+      <div class="auth-card" id="loginCard" style="display:none;">
+        <div class="auth-logo">SCL<span>.</span> Insurance</div>
+        <h2 class="auth-title">Welcome Back</h2>
+        <p class="auth-subtitle">Log in to access your quotes and policies.</p>
+        <div class="auth-error" id="loginError"></div>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <div class="form-group"><label class="form-label">Email *</label><input class="form-input" type="email" id="li-email" placeholder="ahmed@email.com" required></div>
+          <div class="form-group"><label class="form-label">Password *</label>
+            <div class="pw-wrapper"><input class="form-input" type="password" id="li-password" placeholder="Your password" required><button type="button" class="pw-toggle" onclick="togglePw('li-password',this)">Show</button></div>
+          </div>
+          <button type="submit" class="auth-submit">Login</button>
+        </form>
+        <div class="auth-divider"><span class="auth-divider-text">Don't have an account?</span></div>
+        <div class="auth-footer"><a onclick="showSignup()">← Create a new account</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="Scl Logo.png" alt="SCL logo" width="200px"></div>
+        <p class="footer-about">Pakistan's most trusted vehicle insurance comparison platform. Partnered with EFU, Adamjee, Jubilee and TPL Direct.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><span onclick="navigate('home')">Home</span></li>
+          <li><span onclick="navigate('about')">About Us</span></li>
+          <li><span onclick="navigate('plans')">Insurance Plans</span></li>
+          <li><span onclick="navigate('vehicles')">Vehicle Coverage</span></li>
+          <li><span onclick="navigate('contact')">Contact Us</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Our Coverage</div>
+        <ul class="footer-links">
+          <li><span>Third-Party Liability</span></li>
+          <li><span>Comprehensive</span></li>
+          <li><span>Collision Cover</span></li>
+          <li><span>Theft &amp; Snatching</span></li>
+          <li><span>Roadside Assistance</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact Info</div>
+        <p class="footer-contact-text">Plot 14, Block 6, PECHS<br>Karachi, Pakistan 75400<br><br><a href="tel:+922135670000" style="color:#fdba74;">+92-21-3567-0000</a><br><a href="mailto:info@sclinsurance.pk" style="color:#fdba74;">info@sclinsurance.pk</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© <span id="year"></span> SCL Insurance Pakistan. All rights reserved.</span>
+      <div class="footer-legal">
+        <a>Privacy Policy</a><a>Terms of Service</a><a>Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="index.js"></script>
+</body>
+</html>
